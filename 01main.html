@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+    <style>
+        body {
+            background-color: #010111;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .text {
+            font-size: 23px;
+            /* font-weight: bold; */
+        }
+
+        .gauge {
+            width: 400px;
+            height: 5px;
+            background-color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .fill {
+            width: 0;
+            height: 100%;
+            background-color: #ff4da6;
+            border-radius: 10px;
+            animation: fillAnimation 2s ease-in-out forwards;
+        }
+
+        @keyframes fillAnimation {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text" id="statusText">L O A D I N G</div>
+        <div class="gauge">
+            <div class="fill"></div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = '02menu.html';
+        }, 2300);
+    </script>
+
+</body>
+</html>
